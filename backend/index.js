@@ -5,6 +5,7 @@ import cors from 'cors'
 import authRoutes from './routes/authRoutes.js'
 import listRoutes from './routes/listRoutes.js'
 import cookieParser from 'cookie-parser'
+import chatRoutes from './routes/chatRoutes.js'
 dotenv.config()
 
 
@@ -21,6 +22,7 @@ app.use(cookieParser())
 app.use(express.json())
 app.use('/api/auth',authRoutes)
 app.use('/api/listings',listRoutes)
+app.use('/api/chat',chatRoutes)
 
 const startServer = async () => {
     try {
