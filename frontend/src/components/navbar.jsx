@@ -4,6 +4,7 @@ import { Logout } from "../services/logoutuser";
 
 export default function Navbar() {
   const navigate = useNavigate()
+  
  const logoutUser=async()=>{
    let res= await Logout()
     if(res){
@@ -38,8 +39,8 @@ export default function Navbar() {
 
           <div className="dropdown">
             <p onClick={()=>navigate('/profile')}  >My Profile</p>
-            <p>Settings</p>
-            <p>💬 Chats</p>
+          
+            <p onClick={()=>navigate('/chat')} >💬 Chats</p>
 
             <p className="logout" onClick={()=>logoutUser()} > Logout</p>
           </div>
