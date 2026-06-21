@@ -8,6 +8,7 @@ import UpdateListing from "./pages/updatethelist"
 import Wishlist from "./pages/wishlist"
 import ProtectedRoute from "./components/protectedRoutes"
 import Profile from "./pages/profile"
+import Chat from "./pages/chatPage"
 export const App=()=>{
 return(
 <>
@@ -20,6 +21,7 @@ return(
     <Route path="/edit-item/:id"  element={<ProtectedRoute><UpdateListing/></ProtectedRoute>}   />
     <Route path="/wishlist" element={<ProtectedRoute><Wishlist/></ProtectedRoute>} />
     <Route path='/profile' element={<ProtectedRoute><Profile/></ProtectedRoute>}    />
+    <Route path='/chat' element={<Chat/>} />
   </Routes>
 </>
 )

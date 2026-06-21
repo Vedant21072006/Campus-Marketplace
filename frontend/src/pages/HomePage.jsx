@@ -34,6 +34,31 @@ const [sort, setSort] = useState("newest");
       setListings(data);
     }
   };
+  const startChat=async(id)=>{
+    try{
+       let api = await fetch('http://localhost:5000/api/chat/conversation',{
+        method:'POST',
+        credentials:'include',
+        body:JSON.stringify({listingId:id}),
+        headers:{
+          'Content-Type':'application/json'
+        }
+       })
+       api = await api.json()
+       console.log(api);
+       
+       if(api.success){
+          navigate('/chat')
+       }
+       else{
+        alert('error')
+       }
+    }
+    catch(error){
+      console.log(error);
+      
+    }
+  }
 
   return (
     <div className="home">
@@ -134,7 +159,7 @@ const [sort, setSort] = useState("newest");
                     View
                   </button>
 
-                  <button className="chat-btn">
+                  <button className="chat-btn" onClick={()=>startChat(item._id)} >
                     💬 Chat
                   </button>
 

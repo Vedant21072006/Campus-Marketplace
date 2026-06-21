@@ -20,5 +20,5 @@ const shcema = mongoose.Schema({
 },
 {timestamps:true}
 )
-const User = mongoose.model("User",shcema)
+const User = mongoose.model("Users",shcema)
 export default User;

@@ -31,7 +31,7 @@ const listingSchema = mongoose.Schema(
 
     seller: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+      ref: "Users",
       required: true,
     },
     
@@ -43,7 +43,7 @@ const listingSchema = mongoose.Schema(
     wishlist:[
               {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
+        ref: "Users",
         default: []
     }
     ],
