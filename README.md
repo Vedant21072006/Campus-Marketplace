@@ -47,6 +47,8 @@ Unlike public marketplaces, Campus Marketplace is intended exclusively for verif
 * View Statistics on Profile Page
 
 ---
+### Messaging
+-Messaging system between seller and user
 
 ## 🛠️ Tech Stack
 
@@ -145,8 +147,6 @@ CLOUD_API_SECRET=your_cloudinary_api_secret
 ---
 
 ## 🎯 Upcoming Features
-
-* Real-Time Chat System
 * Admin Dashboard
 * User Verification
 * Listing Reports & Moderation
